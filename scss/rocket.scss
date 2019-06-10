@@ -1,0 +1,599 @@
+.rocket-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 3;
+  transform: translateX(-50%) translateY(0);
+  animation-name: take-off;
+  animation-delay: $rocket-takeoff-start;
+  animation-duration: $rocket-takeoff-duration;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes take-off {
+  3% {
+    transform: translateX(-50%) translateY(0);
+    animation-timing-function: ease-in;
+  }
+  25%, 75% {
+    transform: translateX(-50%) translateY(-40vh);
+    animation-timing-function: cubic-bezier(.5,.5,.5,1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100vh);
+  }
+}
+
+.rocket {
+  bottom: 1em;
+  left: 50%;
+  margin-left: -0.4em;
+  position: absolute;
+  height: 3em;
+  width: 0.8em;
+  &__body {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 0.05em;
+    border-bottom-right-radius: 0.05em;
+    background: #fff;
+    background: linear-gradient(to right,
+      rgb(73, 97, 130) 0%,
+      rgb(117, 154, 187) 20%,
+      rgb(82, 93, 115) 60%,
+      rgb(174, 188, 204) 80%,
+      rgb(226, 221, 228) 98%,
+      rgb(180, 195, 214) 100%);
+    box-shadow: inset 0.2em 0em 0.4em 0 rgba(0,0,0,0.4),
+      inset -0.3em 0.2em 0.4em 0.2em rgba(255,255,255,0.1);
+  }
+
+  &__fin {
+    z-index: 1;
+    position: absolute;
+    &--left {
+      border-bottom: 1.3em solid rgb(73, 97, 130);
+      border-right: 0.6em solid transparent;
+      transform: rotate(-135deg);
+      bottom: -0.5em;
+      left: -0.5em;
+    }
+  
+    &--right {
+      border-bottom: 1.3em solid #bbb;
+      border-left: 0.6em solid transparent;
+      bottom: -0.5em;
+      right: -0.5em;
+      transform: rotate(135deg);
+    }
+  
+    &--center {
+      z-index: 3;
+      bottom: -0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.09em;
+      height: 1.2em;
+      background: rgb(92, 103, 125);
+    }
+  }
+
+  &__stream {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    z-index: 1;
+    border-left: 0.05em solid white;
+    border-right: 0.05em solid white;
+    top: 1em;
+    height: 140vh;
+    width: 0.2em;
+    transform: translateX(-50%);
+    background: yellow;
+    animation-name: stream;
+    animation-duration: $rocket-takeoff-duration;
+    animation-delay: $rocket-takeoff-start;
+    animation-fill-mode: forwards;
+  }
+}
+
+.end .rocket {
+  display: none;
+}
+
+@keyframes stream {
+  0% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+.environment {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: 0px;
+  left: -10px;
+  animation-name: shaking;
+  animation-delay: $rocket-takeoff-start;
+  animation-duration: $rocket-takeoff-duration;
+  animation-timing-function: linear;
+}
+
+.end .environment {
+  animation: none;
+}
+
+$shaking-offset: 0.05em;
+
+@keyframes shaking {
+  0%, 5%, 10%, 15%, 20%, 25%, 75%, 80%, 85%, 90% {
+    transform: translateX(0)                translateY(0);
+  }
+  1%, 11%, 21%, 78%, 88% {
+    transform: translateX($shaking-offset)  translateY(0);
+  }
+  2%, 12%, 22%, 79%, 89% {
+    transform: translateX(-$shaking-offset) translateY(0);
+  }
+  3%, 13%, 23%, 76%, 86% {
+    transform: translateX(0)                translateY($shaking-offset);
+  }
+  4%, 14%, 24%, 77%, 87% {
+    transform: translateX(0)                translateY(-$shaking-offset);
+  }
+  6%, 16%, 82% {
+    transform: translateX($shaking-offset)  translateY($shaking-offset);
+  }
+  7%, 17%, 81% {
+    transform: translateX(-$shaking-offset) translateY($shaking-offset);
+  }
+  8%, 18%, 84% {
+    transform: translateX(-$shaking-offset) translateY(-$shaking-offset);
+  }
+  9%, 19%, 83% {
+    transform: translateX($shaking-offset)  translateY(-$shaking-offset);
+  }
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg,
+    #959ba5 0%,
+    #4f6a91, 30%,
+    #25395b 50%,
+    #26305b 100%);
+  animation-delay: $stars-paralax-start - 1s;
+  animation-name: sky;
+  animation-duration: $stars-paralax-duration;
+  background-size: 400% 400%;
+  background-position: 50% 100%;
+  animation-fill-mode: forwards;
+}
+
+.end .sky {
+  background-position:50% 0%;
+  animation: none;
+}
+
+@keyframes sky {
+  0% {
+    background-position:50% 100%;
+  }
+  100% {
+    background-position:50% 0%;
+  }
+}
+
+.surface {
+  position: absolute;
+  z-index: 0;
+  bottom: 1.2em;
+  left: 0;
+  opacity: 1;
+  right: 0;
+  height: .4em;
+  background: linear-gradient(to bottom,
+    rgb(89, 83, 68) 0%,
+    rgb(139, 125, 95) 21%,
+    rgb(103, 99, 51) 53%,
+    rgb(44, 42, 16) 66%,
+    rgb(46, 47, 26) 100%);
+}
+
+.launch-pad {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.2em;
+  background: #efefef;
+}
+
+.vertical-lines {
+  position: absolute;
+  z-index: 1;
+  height: 50vh;
+  width: 0.05em;
+  top: 0;
+  border-radius: 0.1em;
+  left: 0;
+  transform: translateY(0);
+  box-shadow: 20vw -50vh #ddd,
+    80vw -100vh #ddd,
+    60vw -150vh #ddd,
+    20vw -200vh #ddd,
+    40vw -250vh #ddd,
+    50vw -300vh #ddd,
+    10vw -350vh #ddd,
+    70vw -400vh #ddd,
+    30vw -450vh #ddd;
+  animation-name: vertical-lines;
+  animation-delay: $stars-paralax-start - 1s;
+  animation-duration: $stars-paralax-duration - 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.end .vertical-lines {
+  display: none;
+}
+
+@keyframes vertical-lines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(600vh);
+  }
+}
+
+.launch-pad, .surface {
+  animation-name: launch-pad-fade-out;
+  animation-delay: $stars-paralax-start - 1.5s;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.end .launch-pad, .end .surface, .end .rocket-shadow {
+  display: none;
+}
+
+@keyframes launch-pad-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.rocket-shadow {
+  position: absolute;
+  z-index: 2;
+  bottom: 2%;
+  right: 50%;
+  width: 5em;
+  margin-right: -0.2em;
+  height: 0.3em;
+  background: linear-gradient(to right,
+    #FFF 0%,
+    #666 50%);
+  filter: blur(0.2em);
+  transform: rotate(-5deg);
+  animation-name: fade-out;
+  animation-duration: 1s;
+  animation-delay: $rocket-takeoff-start + .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.countdown {
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  width: 1.5em;
+  height: 3em;
+  transform: translateX(-50%);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    top: -0.2em;
+    border-radius: 0.1em;
+    left: 0;
+    box-shadow: 0em 0.2em $countdown-bg-color,
+      0em 1.7em $countdown-bg-color,
+      0em 3.2em $countdown-bg-color;
+    animation-name: countdown-before;
+    animation-duration: $rocket-timer-duration;
+    animation-delay: $rocket-timer-start;
+    animation-fill-mode: forwards;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0.2em;
+    height: 1.2em;
+    left: -0.3em;
+    border-radius: 0.1em;
+    top: 0.25em;
+    box-shadow: 0.2em 0em  $countdown-bg-color,
+      1.7em 0em $countdown-bg-color,
+      0.2em 1.5em $countdown-bg-color,
+      1.7em 1.5em $countdown-bg-color;
+    animation-name: countdown-after;
+    animation-duration: $rocket-timer-duration;
+    animation-delay: $rocket-timer-start;
+    animation-fill-mode: forwards;
+  }
+}
+
+.end .countdown {
+  display: none;
+}
+
+@keyframes countdown-before {
+  0%, 24% {
+    box-shadow: 0em 0.2em $countdown-highlight-color,
+      0em 1.7em $countdown-highlight-color,
+      0em 3.2em $countdown-highlight-color;
+  }
+  25%, 49% {
+    box-shadow: 0em 0.2em $countdown-highlight-color,
+      0em 1.7em $countdown-highlight-color,
+      0em 3.2em $countdown-highlight-color;
+  }
+  50%, 74% {
+    box-shadow: 0em 0.2em $countdown-bg-color,
+      0em 1.7em $countdown-bg-color,
+      0em 3.2em $countdown-bg-color;
+  }
+  75%, 99% {
+    opacity: 1;
+    box-shadow: 0em 0.2em $countdown-highlight-color,
+      0em 1.7em $countdown-bg-color,
+      0em 3.2em $countdown-highlight-color;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes countdown-after {
+  0%, 24% {
+    box-shadow: 0.2em 0em  $countdown-bg-color,
+      1.7em 0em $countdown-highlight-color,
+      0.2em 1.5em $countdown-bg-color,
+      1.7em 1.5em $countdown-highlight-color;
+  }
+  25%, 49% {
+    box-shadow: 0.2em 0em $countdown-bg-color,
+      1.7em 0em $countdown-highlight-color,
+      0.2em 1.5em $countdown-highlight-color,
+      1.7em 1.5em $countdown-bg-color;
+  }
+  50%, 74% {
+    box-shadow: 0.2em 0em $countdown-bg-color,
+      1.7em 0em $countdown-highlight-color,
+      0.2em 1.5em $countdown-bg-color,
+      1.7em 1.5em $countdown-highlight-color;
+  }
+  75%, 99% {
+    opacity: 1;
+    box-shadow: 0.2em 0em  $countdown-highlight-color,
+      1.7em 0em $countdown-highlight-color,
+      0.2em 1.5em $countdown-highlight-color,
+      1.7em 1.5em $countdown-highlight-color;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.smoke {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 6;
+  animation-name: smoke;
+  animation-duration: $rocket-takeoff-duration;
+  animation-delay: $rocket-takeoff-start;
+  animation-fill-mode: forwards;
+}
+
+.end .smoke {
+  display: none;
+}
+
+@keyframes smoke {
+  0%, 26%, 75%, 90% {
+    opacity: 0;
+  }
+  1%, 25%, 76%, 88% {
+    opacity: 1;
+  }
+}
+
+.smoke__bubble {
+  opacity: 0;
+  position: absolute;
+  bottom: -0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.2em;
+  height: 1.2em;
+  background: white;
+  border-radius: 50%;
+  animation-name: smoke-left;
+  animation-duration: 2s;
+  animation-delay: $rocket-takeoff-start;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.smoke__bubble:nth-child(1) {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.smoke__bubble:nth-child(2) {
+  width: 1.5em;
+  height: 1.5em;
+  animation-delay: $rocket-takeoff-start + .2s;
+}
+
+.smoke__bubble:nth-child(3) {
+  width: 1em;
+  height: 1em;
+  animation-delay: $rocket-takeoff-start + .4s;
+}
+
+.smoke__bubble:nth-child(4) {
+  width: 1.5em;
+  height: 1.5em;
+  animation-delay: $rocket-takeoff-start + .7s;
+}
+
+.smoke__bubble:nth-child(5) {
+  width: 2em;
+  height: 2em;
+  animation-delay: $rocket-takeoff-start + .9s;
+}
+
+.smoke__bubble:nth-child(6) {
+  width: 2.5em;
+  height: 2.5em;
+  animation-delay: $rocket-takeoff-start + 1.4s;
+}
+
+.smoke__bubble:nth-child(7) {
+  width: 1.7em;
+  height: 1.7em;
+  animation-delay: $rocket-takeoff-start + 1.6s;
+}
+
+.smoke__bubble:nth-child(8) {
+  width: 1.2em;
+  height: 1.2em;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(9) {
+  width: 1.7em;
+  height: 1.7em;
+  animation-delay: $rocket-takeoff-start + .3s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(10) {
+  width: 2.2em;
+  height: 2.2em;
+  animation-delay: $rocket-takeoff-start + .5s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(10) {
+  width: 1.2em;
+  height: 1.2em;
+  animation-delay: $rocket-takeoff-start + .8s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(11) {
+  width: 2.5em;
+  height: 2.5em;
+  animation-delay: $rocket-takeoff-start + 1.2s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(12) {
+  width: 2em;
+  height: 2em;
+  animation-delay: $rocket-takeoff-start + 1.5s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(13) {
+  width: 2.1em;
+  height: 2.1em;
+  animation-delay: $rocket-takeoff-start + 1.9s;
+  animation-name: smoke-right;
+}
+
+.smoke__bubble:nth-child(14) {
+  width: 1.8em;
+  height: 1.8em;
+  animation-name: smoke-alt;
+}
+
+.smoke__bubble:nth-child(15) {
+  width: 1.3em;
+  height: 1.3em;
+  animation-delay: $rocket-takeoff-start + 1s;
+  animation-name: smoke-alt;
+}
+
+@keyframes smoke-left {
+  from {
+    background: white;
+    opacity: 1;
+    transform: scale(1) translateX(-50%) translateY(0.9em);
+  }
+  to {
+    background: #CCC;
+    opacity: 0;
+    transform: scale(1.5) translateX(-5em) translateY(0);
+  }
+}
+
+@keyframes smoke-alt {
+  from {
+    background: white;
+    opacity: 1;
+    transform: scale(1) translateX(-50%) translateY(0.9em);
+  }
+  to {
+    background: #EEE;
+    opacity: 0;
+    transform: scale(1.5) translateX(-25%) translateY(0);
+  }
+}
+
+@keyframes smoke-right {
+  from {
+    background: white;
+    opacity: 1;
+    transform: scale(1) translateX(-50%) translateY(0.9em);
+  }
+  to {
+    background: #CCC;
+    opacity: 0;
+    transform: scale(1.5) translateX(5em) translateY(0);
+  }
+}

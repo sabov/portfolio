@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IBM SPSS Statistics - Oleksandr Sabov</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141591229-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141591229-1');
+    </script>
+    <script src="/js/throttle.js"></script>
+    <script src="/js/breadcrumb.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <div class="breadcrumb">
+        <div class="breadcrumb__links">
+          <a href="/#portfolio">Home</a> /
+          <span class="breadcrumb__current-page">
+            IBM SPSS Statistics
+          </span>
+        </div>
+      </div>
+      <article class="article">
+        <h1>IBM SPSS Statistics</h1>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/spss-first.png"
+            alt="IBM SPSS Statistics - new UI"
+          >
+          <figcaption>IBM SPSS Statistics - new UI</figcaption>
+        </figure>
+        <p>
+          I’d like to say that this is by far the most complex project I have ever worked on. First version of SPSS was released in 1968 and it used punch cards as an input. For half a century, this application was growing and it became a powerful tool for statisticians with more than 100 different procedures, tests and analyses. Some parts of the application give users complete freedom in what they can do and it makes this project unique in terms of problems that we had to solve as a design team. Currently it is one of the most widely used statistical applications in the world.
+        </p>
+        <ul>
+          <li>Role: UX Engineer</li>
+          <li>Team: 10+ designers and 30+ engineers</li>
+          <li>Duration: 2+ years (2017 - now)</li>
+          <li>
+            Download the new SPSS Statistics UI on the
+            <a href="https://www.ibm.com/products/spss-statistics" target="_blank">IBM Marketplace</a>
+          </li>
+
+        </ul>
+        <h2 class="article__highlight">
+          <strong>
+            Mission:
+          </strong>
+          Redesign IBM SPSS Statistics
+        </h2>
+        <h3>Transformation</h3>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/spss-v25.jpg"
+            alt="IBM SPSS Statistics - version 25"
+          >
+          <figcaption>IBM SPSS Statistics - version 25</figcaption>
+        </figure>
+        <p>
+          First of all our team was conducting research, we wanted to know what people think about the current SPSS version.
+          We learned that less experienced users often were intimidated by the complexity
+          of the software. Therefore, we focused on simplifying basic
+          workflows and providing beginners with an easy onboarding to statistics and the
+          application. Let's go through some of the changes that we introduce
+          recently.
+        </p>
+        <h4>1. Navigation</h4>
+        <!--
+        <p>
+           SPSS Statistics is a powerful product that can perform many tasks
+           with varying levels of complexity. However, as user attention spans
+           grow shorter, we have learned that working with multiple open
+           windows actually leads to high cognitive load, necessitating a different
+           approach that provides very focused experiences.
+        </p>
+        -->
+        <p>
+          We learned that a big amount of modal windows made it hard to navigate in the application.
+          Here is a short animation that shows how we solved this problem. We minimized amount of modal
+          windows and used different UX patterns to make sure that users do not get lost in the application.
+        </p>
+        <figure>
+          <div class="demo">
+            <input
+              aria-hidden="true"
+              type="checkbox"
+              class="demo__checkbox"
+              id="demo-1"
+              onchange="setTimeout(() => this.checked = false, 10000)"
+             >
+            <label class="demo__play" for="demo-1"></label>
+            <div class="demo__content">
+              <div class="window">
+                <div class="page">
+                  <div class="modal"></div>
+                  <div class="modal"></div>
+                  <div class="modal"></div>
+                  <div class="tab"></div>
+                  <div class="topbar"></div>
+                  <div class="sidebar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Tabs and a side panel instead of modal windows</figcaption>
+        </figure>
+        <h4>2. Onboarding</h4>
+        <p>
+          One of the first discoveries we made was that first-time users
+          needed to spend a considerable amount of time reading documentation and
+          textbooks and viewing tutorials before getting started due to lack of
+          familiarity with the domain and product environment. We determined
+          the product needed an immersive getting started experience that would
+          provide an easy-to-digest user flow and make intensive study or training
+          unnecessary.
+        </p>
+        <p>
+          We have created an onboarding experience that introduces SPSS and
+          basic statistics to our new users. Learning by doing is the best way
+          to explore a new application and we use this principle in the
+          onboarding process.
+        </p>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/spss-onboarding.png"
+            alt="IBM SPSS Statistics - Onboarding"
+          >
+          <figcaption>IBM SPSS Statistics - Onboarding</figcaption>
+        </figure>
+        <h4>3. Iterative Workflow</h4>
+        <p>
+          We talked to experienced users as well, and for them it's important
+          to keep focus and do productive work. We introduced an iterative workflow
+          that allows users to make changes to the final results and, if necessary,
+          re-run an analysis on a new dataset.
+        </p>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/spss-test.png"
+            alt="IBM SPSS Statistics - Analysis"
+          >
+          <figcaption>IBM SPSS Statistics - Analysis</figcaption>
+        </figure>
+        <h4>4. Small details</h4>
+        <p>
+          We worked not only on big stories and flows but we tried
+          to add small touches in all parts of the application. One of the examples
+          is the very first interaction of a new user with the application.
+        </p>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/spss-welcome.png"
+            alt="IBM SPSS Statistics - Welcome screen"
+          >
+          <figcaption>IBM SPSS Statistics - Welcome screen</figcaption>
+        </figure>
+        <p>
+          We redesigned a lot of aspects of IBM SPSS Statistics that I didn't
+          cover here.
+          Our ultimate goal is to invent a better way for people to interact
+          with statistical software.
+        </p>
+        <h3>My Role</h3>
+        <p>
+          As a UX Engineer I use my software engineering and design skills to
+          works on product design. I’m a technical voice in our design team and I
+          help other designers to better understand the constraints that we have
+          in the software. At the same time I work closely with the development
+          team to contribute and learn more about our code base and the
+          application itself.
+        </p>
+        <h3>Process</h3>
+        <p>
+          Design teams at IBM consists of User Researchers, UX Designers, Visual
+          Designers and UX Engineers. As a member of design team I work on UX
+          concepts and prototypes. I am involved in all steps of the design
+          process and partly in the engineering process.
+          Here are the main steps of the design and development process.
+        </p>
+        <ol>
+          <li>Research</li>
+          <li>UX/Interaction design</li>
+          <li>Prototyping</li>
+          <li>User tests</li>
+          <li>Visual design</li>
+          <li>Engineering</li>
+          <li>Review</li>
+        </ol>
+        <p>
+          The process is not linear and at any point of time we go back to rework something.
+          I'd like to cover a few steps of the process where I'm involved the most.
+        </p>
+
+        <h4>UX/Interaction design</h4>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/user-journey.png"
+            alt="User journey map"
+          >
+          <figcaption>A sample user journey map (<a target="_blank" href="https://medium.com/sketch-app-sources/user-journey-maps-or-user-flows-what-to-do-first-48e825e73aa8">source</a>)</figcaption>
+        </figure>
+        <p>
+          Based on research outcomes our team defines a couple of
+          <a
+            href="https://www.ibm.com/design/thinking/page/framework/keys/hills"
+            target="_blank"
+          >hills</a>
+          (statements, big goals). Usually we divide our team to smaller squads and we work
+          on different hills in parallel. First of all, we build a user journey map based on research artifacts. 
+          Our goal is to understand paint points and make sure that we keep existing positive user experiences. 
+          We work on big ideas and define to-be scenarios. That’s
+          the time where we use paper prototypes and storytelling to communicate
+          our ideas and concepts to the users to select the best ideas. While we
+          are building UX concepts we take time to make a few
+          <a
+            href="https://www.ibm.com/design/thinking/page/framework/keys/playbacks"
+            target="_blank"
+          >playbacks</a>
+          to align with the engineering team and check the feasibility of our ideas.
+        </p>
+
+        <h4>Prototyping</h4>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/prototype.jpeg"
+            alt="Paper prototype"
+          >
+          <figcaption>A sample paper prototype (<a target="_blank" href="https://medium.com/digital-experience-design/a-guide-to-paper-prototyping-testing-for-web-interfaces-49e542ba765f">source</a>)</figcaption>
+        </figure>
+        <p>
+          The to-be scenarios are mostly focused on user emotions and do not
+          cover user interfaces that much. This is why the next step for us is to
+          bring the stories back to the screen and we use prototyping for this.
+          Together with UX designers I work on medium fidelity prototypes and
+          after a few iterations we get together with other team members to show
+          our work. The review sessions are essential for our team. People
+          work on different topics but it’s crucial to share what we do.
+          It helps us to align, get other opinions, but most importantly, be consistent
+          in the UX patterns that we use across the application. After the review
+          session we decide what exactly we want to test with the
+          <a
+            href="https://www.ibm.com/design/thinking/page/framework/keys/sponsor-users"
+            target="_blank"
+          >sponsor users</a>
+          and I create a few interactive prototypes using HTML and JavaScript.
+          This is the time for UX Engineers to shine. I build prototypes based
+          on a user test scenario. In our team we use pair programming technique
+          to work on interactions and animations. It’s not classic pair programming
+          because the second person is a UX designer so the conversation is mostly
+          around motion design.
+        </p>
+        <h4>User tests</h4>
+        <p>
+          The next step is a user test where we show our work. Depending on
+          the user test scenario we use qualitative or quantitative user tests.
+          I really like to participate in the user tests as an observer.
+          It's really exciting to watch how our users interact with prototypes.
+          Each time I understand a bit better how the users think and I see many
+          opportunities and ways to improve the application even more. Most of the time after
+          the user tests we go back to UX concepts or just tweek already created
+          prototypes and then we test everything again. After a couple of
+          iteration we can move forward to the visual design.
+        </p>
+        <h4>Engineering</h4>
+        <p>
+          As a UX Engineer I contribute to the source code of the application. I
+          support our engineering team and help with animations and interactions. 
+          I enjoy solving complex problems that all software engineers solve on daily basis.
+          Close collaboration with our engineering team is a great way to learn more about
+          the application as well as the people who build it.
+        </p>
+        <h4>Review</h4>
+        <p>
+          The last step for the design team is the implementation review. We want to make sure
+          that both UX and visual designs were implemented correctly. After a few
+          reviews and additional user tests we release an update.
+        </p>
+        <h3>Results</h3>
+        <p>
+          Here is a tweet that summarizes our work.
+          We did improve the application, but we still have many opportunities to make SPSS Stats even better.
+        </p>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/spss-feedback.png"
+            alt="Tweet about new SPSS: What I like about the new SPSS - it's clean and easy to navigate as beginner. What I don't like about the new SPSS - all the tutorials are in the old one :)"
+          >
+          <figcaption>Tweet about the new SPSS UI</figcaption>
+        </figure>
+        <p>
+          Our design team has been awarded the 2018 Red Dot: Communication Design
+          Award in the Interface Design category and a couple of internal IBM awards.
+        </p>
+        <p>If you scrolled till the end without reading then don't worry I've got a short video for you that summarizes everything what I wrote above.</p>
+        <div class="responsive-video">
+          <iframe class="article__video" width="560" height="315" src="https://www.youtube.com/embed/KrDN2vzaNJU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="text-right">
+          Next poject:
+          <a href="/portfolio/whocanfixmycar/">WhoCanFixMyCar.com&nbsp;&#8594;</a>
+        </p>
+      </article>
+    </div>
+  </body>
+</html>

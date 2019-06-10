@@ -1,0 +1,72 @@
+.note {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  width: 0.5em;
+  height: 1em;
+  border: 0.1em solid #333;
+  border-top: 0.2em solid #333;
+  border-bottom: 0;
+  transform: skew(0deg, -15deg);
+  animation-name: note-fade-out;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.note::after {
+  content: '';
+  position: absolute;
+  width: 0.5em;
+  height: 0.4em;
+  border-radius: 50%;
+  transform: skew(0deg, 15deg);
+  box-shadow: -0.5em 0.85em 0 0 #333,
+    0.10em 0.7em 0 0 #333;
+}
+
+.note--1 {
+  font-size: 1em;
+  left: -1em;
+  top: 2em;
+  animation-delay: 2s;
+}
+
+.note--2 {
+  font-size: 1em;
+  left: 3em;
+  top: 2em;
+}
+
+.note--3 {
+  font-size: 0.7em;
+  left: -1em;
+  top: 3em;
+  animation-delay: 3.5s;
+}
+
+.note--4 {
+  font-size: 1.5em;
+  left: 3em;
+  top: 3em;
+  animation-delay: 1.5s;
+}
+
+@keyframes note-fade-out {
+  0% {
+    transform: translateY(0) skew(0deg, -15deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-1em) translateX(0.5em) skew(0deg, -15deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5em) translateX(-0.5em) skew(0deg, -15deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6em) skew(0deg, -15deg);
+  }
+}

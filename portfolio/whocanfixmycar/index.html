@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhoCanFixMyCar - Oleksandr Sabov</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141591229-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141591229-1');
+    </script>
+    <script src="/js/throttle.js"></script>
+    <script src="/js/breadcrumb.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <div class="breadcrumb">
+        <div class="breadcrumb__links">
+          <a href="/#portfolio">Home</a> /
+          <span class="breadcrumb__current-page">
+            WhoCanFixMyCar.com
+          </span>
+        </div>
+      </div>
+      <article class="article">
+        <h1>WhoCanFixMyCar.com</h1>
+        <div class="responsive-video">
+          <iframe class="article__video" width="560" height="315" src="https://www.youtube.com/embed/hC1XbYrdROk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>
+          WhoCanFixMyCar.com (WCFMC) is the UK’s leading local garage and mechanic comparison service, allowing drivers to post jobs and receive quotes from local garages and mechanics. The platform currently has 12,500 garages registered to the site, has processed 1.5 million repair requests from UK drivers and receives circa 60,000 new job requests from drivers every month.
+        </p>
+        <ul>
+          <li>Role: Full Stack Developer</li>
+          <li>Team: 1 designer, 5 engineers, 1 QA</li>
+          <li>Duration: 1.5 years (2013 - 2015)</li>
+          <li>
+            <a href="https://www.whocanfixmycar.com/" target="_blank">Home page</a>
+          </li>
+
+        </ul>
+        <h2 class="article__highlight">
+          <strong>
+            Mission:
+          </strong>
+          Create the next version of the platform
+        </h2>
+        <h3>Transformation</h3>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/wcfmc-old.png"
+            alt="whocanfixmycar.com website in 2014"
+          >
+          <figcaption>
+            <a target="_blank" href="https://web.archive.org/web/20141223175626/http://www.whocanfixmycar.com/">whocanfixmycar.com</a>
+            website in 2014</figcaption>
+        </figure>
+        <p>
+          The first version of the website was written as a prototype, and it became difficult to maintain and scale.
+          Our team had to implement a new design and make sure that the next version of the portal is able to handle a large number of users.
+          The platform consists of the following parts:
+        </p>
+        <ol>
+          <li>Public pages (landing, sign up, how it works, reviews, etc)</li>
+          <li>Car owners space (jobs, quotes, chat with garages, review page)</li>
+          <li>Garage owners space (jobs, created quotes, chat with car owners)</li>
+          <li>Internal services used by the support team</li>
+        </ol>
+        <h4>1. Redesign</h4>
+        <figure>
+            <img
+              class="article__img"
+              width="800"
+              src="/images/wcfmc-new.png"
+              alt="whocanfixmycar.com after redesign"
+            >
+            <figcaption>
+              <a target="_blank" href="https://web.archive.org/web/20150921152819/https://www.whocanfixmycar.com/">whocanfixmycar.com</a>
+              after redesign
+            </figcaption>
+          </figure
+        <p>
+          Our team recevied design specs for the most of the exisiting pages. We have created a style guide
+          that we used to build layouts for the platform.
+          Common styles and components enforce consistency and same look-and-feel across the service.
+        </p>
+        <h4>2. Responsive design</h4>
+        <figure>
+            <img
+              class="article__img article__img--small"
+              width="400"
+              src="/images/wcfmc-mobile.png"
+              alt="whocanfixmycar.com on mobile device"
+            >
+            <figcaption>
+              whocanfixmycar.com on mobile device
+            </figcaption>
+          </figure>
+        <p>
+          A lot of users of the platform were using smartphones to create jobs and communicate with garages.
+          Therefore, it was crucial for our team to make sure that all mobile users were receiving access to all features of the platform. 
+          We focused on the following ascpets: 
+          <ol>
+            <li>Media queries for responsive layouts</li>
+            <li>Touch screen friendly sizes for interactive elements</li>
+            <li>Optimized media to reduce network traffic</li>
+          </ol>
+        </p>
+        <h4>3. Engineering</h4>
+        <p>
+          We used 
+          <a target="_blank" href="https://knockoutjs.com/">Knockout.js</a>
+          on the client side to create interactive parts of the application like messager, quote calculator, etc. On the server side we used
+          <a target="_blank" href="https://nodejs.org/en/">Node.js</a>
+          and
+          <a target="_blank" href="https://www.postgresql.org/">PostgreSQL</a>.
+          It took us almost 1 year to achieve feature parity and release the next version of the platform.
+        </p>
+        <h3>My Role</h3>
+        <p>
+            I joined the project as a Front End Developer and grew to Lead Full Stack Developer in 1 year.
+            I've create the most of the basic layouts and styles on early stages of the development.
+            I was taking care of responsive design and my mission was to build layouts as close as possible to the design specs.
+        </p>
+        <p>
+            After a few months of work, I started to contribute to the backend modules as well. I used Node.js before for some personal projects and I was happy to use my knowledge in a real product with thousands of users.
+        </p>
+        <p>
+            After releasing the platform we realised that we have a few performance bottlenecks and I was responsible to optimize the application and database to handle ~50 requests per second. To solve the problem I've used load balancing and multiple node instances to handle more users. On the other hand, I optimized database requests to make sure that Express server recives data as soon as possible. 
+        </p>
+        <h3>Process</h3>
+        <p>
+            We used code review and unit tests to improve overall quality of the code and prevent regressions. A continuous delivery system helped us to deliver updates of the system to the users. One of my tasks was to maintain it and make sure that the platform stays online 24/7.
+        </p>
+        <h3>Results</h3>
+        <p>
+            Overall, our users positively received the next version of the platform and the project secured a new round of investments to keep growing the business. Personally, I enjoind working on the project, we had to solve a lot of interesing problems and it was fun to work in a multidisciplinary team. I learned how to build and maintain a complex systems with thousands of users. Here is a great video about how the platform help people to fix their cars.
+        </p>
+        <div class="responsive-video">
+          <iframe class="article__video" width="560" height="315" src="https://www.youtube.com/embed/CM4yMzxxIYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="text-right">
+          Next poject:
+          <a href="/portfolio/openmrs/">OpenMRS for oncology&nbsp;&#8594;</a>
+        </p>
+      </article>
+    </div>
+  </body>
+</html>

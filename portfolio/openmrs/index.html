@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenMRS for oncology - Oleksandr Sabov</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141591229-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141591229-1');
+    </script>
+    <link rel="stylesheet" href="/css/main.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141591229-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141591229-1');
+    </script>
+    <script src="/js/throttle.js"></script>
+    <script src="/js/breadcrumb.js"></script>
+    <script src="/js/siema.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mySiema = new Siema();
+        document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+        document.querySelector('.next').addEventListener('click', () => mySiema.next());
+      }, false);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <div class="breadcrumb">
+        <div class="breadcrumb__links">
+          <a href="/#portfolio">Home</a> /
+          <span class="breadcrumb__current-page">
+            OpenMRS for oncology
+          </span>
+        </div>
+      </div>
+      <article class="article">
+        <h1>OpenMRS for oncology</h1>
+        <figure>
+          <img
+            class="article__img"
+            width="800"
+            src="/images/openmrs.png"
+            alt=""
+          >
+          <figcaption>
+            OpenMRS for oncology - create regimen form
+          </figcaption>
+        </figure>
+        <p>
+          Collaborative work with Partners In Health, Hôpital Universitaire de Mirebalais (Haiti), Uganda Cancer Institute, University of North Carolina, and the OpenMRS Community on a oncology module for OpenMRS.
+        </p>
+        <ul>
+          <li>Role: Front-End Developer</li>
+          <li>Team: 1 designers, 5 engineers</li>
+          <li>Duration: 3 weeks (July 2018)</li>
+          <li>
+            <a href="https://github.com/openmrs/openmrs-module-oncology" target="_blank">GitHub repo</a>
+          </li>
+
+        </ul>
+        <h2 class="article__highlight">
+          <strong>
+            Mission:
+          </strong>
+          Create an oncology module for OpenMRS
+        </h2>
+        <h3>Cancer crisis in LMIC</h3>
+        <p>
+          There is a silent growing cancer crisis in low and middle-income countries and less than 30% of them have cancer treatment services. 
+          Hospitals that provide cancer care store most of the inforamtion on paper.
+        </p>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/hospital.png"
+            alt="Medical records in one of the hospitals in LMIC"
+          >
+          <figcaption>
+            Medical records in one of the hospitals in LMIC
+          </figcaption>
+        </figure>
+        <p>
+          Recording of all the inforamtion about cancer treatment is crititcal. 
+          Some of the chemotherapy drugs have a lifetime dosage and loosing information about admissions can lead to death of patients.
+          On the next picture Johnblack is holding a sheet of paper "OpenMRS for cancer care".
+          He is a medical officer and in 2017 he participated in OMRS conference where he talked about
+          how important it is to build an oncology module for
+          <a href="https://en.wikipedia.org/wiki/OpenMRS" target="_blank">OpenMRS</a>.
+          OpenMRS is a collaborative open-source project to develop software to support the delivery of health care in developing countries.
+          It provides many modules that allows hospitals to keep important inforamtion in one place but it still doesn't have
+          a module that would help to treat cancer.
+        </p>
+        <figure>
+          <img
+            class="article__img article__img--shadow"
+            width="800"
+            src="/images/Johnblack.png"
+            alt="Johnblack talks about OpenMRS for cancer care at OMRS conference in 2017"
+          >
+          <figcaption>
+            Johnblack talks about OpenMRS for cancer care at OMRS conference in 2017
+          </figcaption>
+        </figure>
+        <h3>OpenMRS for cancer care</h3>
+        <p>
+          Partners in Health and IBM decided to solve this problem together.
+          In 2018 a team of IBMers came to Boston to work on an oncology module for OpenMRS and I was a part of this team.
+          We all joined a program called
+          <a href="https://www.ibmhealthcorps.org/" target="_blank">IBM Health Corps</a>,
+          it's a global pro bono program focused on tackling health disparities.
+        </p>
+        <p>
+          We arrived to Boston to work with
+          <a href="https://www.pih.org/" target="_blank">Partners In Health</a>,
+          it is a Boston-based nonprofit health care organization founded in 1987.
+          It builds hospitals and other medical facilities, hires and trains local staff, and delivers a range of healthcare, from in-home consultations to cancer treatments.
+          <a target="_blank" href="https://vimeo.com/ondemand/bendingthearc">This movie</a> is the first thing that our new colleagues showed us, it tells an incredible story
+          about this wonderful organization and the people who work there.
+          I really recommend to watch it.
+        </p>
+        <h4>As-is scenario</h4>
+        <p>
+          We knew that we have only 3 weeks to work on this project and therefore, we started doing research in advance.
+          Together with our UX designer I participated in a couple of interviews with nurses that have experience in treating cancer in LMIC.
+          We've built an "as-is" scenario and identified the main pain points.
+          In our case, we called them "death" points, because some of steps of the current process were so risky that any
+          mistake could lead to death.
+        </p>
+        <div class="siema">
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.001.png"
+              alt="Doctor receives lab results"
+            >
+            <figcaption>
+              1/14 - Doctor receives lab results
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.002.png"
+              alt="Doctor determines patient’s Chemo regimen"
+            >
+            <figcaption>
+              2/14 - Doctor determines patient’s Chemo regimen
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.003.png"
+              alt="Patient comes to the hospital"
+            >
+            <figcaptoion>
+              3/14 - Patient comes to the hospital
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.004.png"
+              alt="Nurse asks control questions and measures BSA (Body Surface Area)"
+            >
+            <figcaption>
+              4/14 - Nurse asks control questions and measures BSA (Body Surface Area)
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.005.png"
+              alt="Nurse checks all previous Chemotherapy cycles"
+            >
+            <figcaption>
+              5/14 - Nurse checks all previous Chemotherapy cycles
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.006.png"
+              alt="If the nurse misses any important information, it can lead to the death of the patient"
+            >
+            <figcaption>
+              6/14 - If the nurse misses any important information, it can lead to the death of the patient
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.007.png"
+              alt="Nurse calculates the amount of the drug and asks for approval"
+            >
+            <figcaption>
+              7/14 - Nurse calculates the amount of the drug and asks for approval
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.008.png"
+              alt="If the nurse makes a mistake when calculating the dosage, it can lead to the death of the patient"
+            >
+            <figcaption>
+              8/14 - If the nurse makes a mistake when calculating the dosage, it can lead to the death of the patient
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.009.png"
+              alt="Nurse mixes drugs"
+            >
+            <figcaption>
+              9/14 - Nurse mixes drugs
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.010.png"
+              alt="She can mix drugs for several patients simultaneously"
+            >
+            <figcaption>
+              10/14 - She can mix drugs for several patients simultaneously
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.011.png"
+              alt="If the nurse makes any mistake on this step, it can lead to the death of the patient"
+            >
+            <figcaption>
+              11/14 - If the nurse makes any mistake on this step, it can lead to the death of the patient
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.012.png"
+              alt="Nurse makes notes about any reactions while the Patient takes the drugs"
+            >
+            <figcaption>
+              12/14 - Nurse makes notes about any reactions while the Patient takes the drugs
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.013.png"
+              alt="Doctor re-evaluates Chemo regimen"
+            >
+            <figcaption>
+              13/14 - Doctor re-evaluates Chemo regimen
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="article__img article__img--shadow"
+              width="800"
+              src="/images/openmrs/ibm-partners-in-health.014.png"
+              alt="Nurse schedules the next appointment"
+            >
+            <figcaption>
+              14/14 - Nurse schedules the next appointment
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-buttons">
+          <button class="prev">←</button>
+          <button class="next">→</button>
+        </div>
+        <h4>Design and Developemnt</h4>
+        <p>
+          Our team consisted of
+        </p>
+        <ul>
+          <li>1 UX Designer</li>
+          <li>3 Software Engineers</li>
+          <li>2 Front-End Developes (including me)</li>
+        </ul>
+        <p>
+          We decided to focus on the very first step of the process - recording a regimen and tracking patient visits.
+          First week I was working together with our UX designer on mockups that we were reviewing with the stakeholders.
+          At the same time 3 software engineers were digging in the source code of the OpenMRS core modules.
+          After the first design iteration I switched to front-end. Together with my colleague we've create
+          basic layouts and prepared everything for integration with REST API.
+        </p>
+        <p>
+          Our backend team was in extremely difficult situation. They had to come up with a solution that the OpenMRS community will be able to pick up and continue building after we leave. 
+          After a lot of calls and discussions, we finally reached an agreement and our software engineers
+          created a branch with all required changes to the core modules. Last week we were integrating all pieces of the puzzle.
+        </p>
+        <h3>Results</h3>
+        <p>
+          Here is a demo video that shows results of our work.
+        </p>
+        <div class="responsive-video">
+          <iframe class="article__video" width="560" height="315" src="https://www.youtube.com/embed/acRL9razsss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>
+          Check out all our deliverables <a target="_blank" href="https://github.com/openmrs/openmrs-module-oncology/blob/master/README.md#deliverables">here</a>.
+          Currently our proposal is waiting to be incorporated to the source code of the OpenMRS core modules.
+          I hope one day it will be used to help treat cancer in LMIC.
+        </p>
+
+        <p class="text-right">
+          Next poject:
+          <a href="/portfolio/just-for-fun/">University and just-for-fun projects&nbsp;&#8594;</a>
+        </p>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+.ball {
+  font-size: 0.35em;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  transform: translateX(0) translateY(0);
+}
+
+.start .ball {
+  animation-name: ball-transition;
+  animation-duration: 5s;
+  animation-delay: 3.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.ball__inset-shadow {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  background-color: #FFF;
+	box-shadow: inset 0 -1em 2em rgba(0,0,0,0.5);
+  transform: translateX(0) translateY(0px);
+  animation: bounce 1.2s 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.ball__pentagons {
+  width: 100%;
+  height: 100%;
+  animation-name: rolling;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+}
+
+.ball__shadow {
+  position: absolute;
+  top: 4.1em;
+  left: 0.5em;
+  z-index: -1;
+  width: 4em;
+  height: 1em;
+  background: #555;
+  opacity: 0.5;
+  border-radius: 50%;
+  filter: blur(5px);
+  animation-name: ball-shadow;
+  animation-duration: 0.6s;
+  animation-delay: 0.58s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.pentagon {
+  position: relative;
+  width: 2em;
+  box-sizing: content-box;
+  border-width: 2em 0.75em 0;
+  border-style: solid;
+  font-size: 0.5em;
+  border-color: black transparent;
+}
+.pentagon:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -3.2em;
+  left: -0.7em;
+  font-size: 1em;
+  border-width: 0 1.75em 1.25em;
+  border-style: solid;
+  border-color: transparent transparent black;
+}
+
+.pentagon--1 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: rotateZ(-5deg);
+}
+
+.pentagon--2 {
+  position: absolute;
+  top: 35%;
+  left: -10%;
+  transform: rotateZ(20deg) rotateY(40deg);
+}
+
+.pentagon--3 {
+  position: absolute;
+  top: 80%;
+  left: 9%;
+  transform: rotateZ(40deg) rotateX(50deg);
+}
+
+.pentagon--4 {
+  position: absolute;
+  top: 78%;
+  left: 62%;
+  transform: rotateZ(40deg) rotateY(50deg);
+}
+
+.pentagon--5 {
+  position: absolute;
+  top: -6%;
+  left: 30%;
+  transform: rotateZ(20deg) rotateX(50deg);
+}
+
+.pentagon--6 {
+  position: absolute;
+  top: 28%;
+  left: 82%;
+  transform: rotateZ(50deg) rotateX(50deg);
+}
+
+@keyframes rolling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
+
+@keyframes ball-transition {
+  0% {
+    transform: translateX(15em) translateY(0);
+  }
+  100% {
+    transform: translateX(-15em) translateY(0);
+  }
+}
+
+@keyframes ball-shadow {
+  0%, 80% {
+    opacity: 0;
+    filter: blur(10px);
+    animation-timing-function: easy-out;
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(5px);
+    animation-timing-function: easy-in;
+  }
+}
+
+@keyframes bounce {
+	0% {
+    transform: translateX(0) translateY(-15em);
+		animation-timing-function: ease-in;
+	}
+	50% {
+    transform: translateX(0) translateY(-1em) scaleY(1);
+		animation-timing-function: ease-out;
+	}
+	55% {
+    transform: translateX(0) translateY(0.5em) scaleY(0.85);
+	  animation-timing-function: ease-in;
+  }
+	60% {
+    transform: translateX(0) translateY(-1em) scaleY(1);
+		animation-timing-function: ease-out;
+  }
+	99%, 100% {
+		transform: translateX(0) translateY(-15em);
+		animation-timing-function: ease-in;
+	}
+}

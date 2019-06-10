@@ -1,0 +1,418 @@
+.stars {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  transform: translateY(-3em);
+  animation-name: stars-paralax;
+  animation-delay: $stars-paralax-start;
+  animation-duration: $stars-paralax-duration;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.end .stars {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes stars-paralax {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(-3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.falling-star {
+  top: 20%;
+  width: 100%;
+  position: absolute;
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.falling-star::after {
+  content: '';
+  top: 40%;
+  left: 0;
+  position: absolute;
+  background: white;
+  width: 40%;
+  height: 0.04em;
+  transform: translateX(-100vw);
+  animation-name: falling-star;
+  animation-duration: 10s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes falling-star {
+  0%, 46% {
+    transform: translateX(-150vw);
+  }
+  54%, 100% {
+    transform: translateX(150vw);
+  }
+}
+
+.scene__secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-100vh);
+  animation-name: moon-slide-down;
+  animation-delay: $stars-paralax-start;
+  animation-duration: $stars-paralax-duration;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.end .scene__secondary {
+  animation: none;
+  transform: translateY(0);
+}
+
+@keyframes moon-slide-down {
+  0%, 25% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.moon {
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6em;
+  width: 10em;
+  height: 10em;
+  background: #d3dace;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.moon__side {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 45%;
+  overflow: hidden;
+  transform: rotate(-40deg);
+  transform-origin: 50% 100%;
+}
+
+.moon__side::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background: #edefeb;
+  border-radius: 50%;
+  top: 0;
+  left: 0%;
+}
+
+.moon__side::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: #d3dace;
+  border-radius: 50% 50% 0 0;
+  top: 30%;
+  left: 0%;
+}
+
+.moon__side--dark {
+  transform: rotate(140deg);
+}
+
+.moon__side--dark::before {
+  background: #c4ccbe;
+}
+
+.moon__crater {
+  background: #c4ccbe;
+  transform: rotate(-40deg);
+  box-sizing: border-box;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 -0.075em #ececec,
+    0 0.125em #a2ad99;
+  border-radius: 50%;
+}
+
+.moon__crater::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0.025em solid #c4ccbe;
+  border-radius: 50%;
+  box-shadow: inset 0 0.1em #a2ad99,
+    inset 0 -0.075em #ececec;
+}
+
+.moon__crater:nth-child(1) {
+  font-size: 3.2em;
+  transform: rotate(-40deg) scale(1.05, 1);
+  top: 30%;
+  left: 25%;
+}
+.moon__crater:nth-child(2) {
+  font-size: 1.8em;
+  top: 25%;
+  left: 65%;
+}
+
+.moon__crater:nth-child(3) {
+  font-size: 1.1em;
+  top: 50%;
+  left: 50%;
+}
+
+.moon__crater:nth-child(4) {
+  font-size: 0.6em;
+  top: 42%;
+  left: 35%;
+}
+
+.moon__crater:nth-child(5) {
+  font-size: 0.7em;
+  background: #e3e5e0;
+  transform: rotate(-15deg) scale(1.8, 1);
+  top: 6%;
+  left: 38%;
+}
+
+.moon__crater:nth-child(6) {
+  transform: rotate(-15deg) scale(1.4, 1);
+  top: 80%;
+  left: 45%;
+}
+
+.moon__crater:nth-child(7) {
+  font-size: 0.7em;
+  transform: rotate(-50deg) scale(1.2, 1);
+  top: 70%;
+  left: 78%;
+}
+
+.moon__crater:nth-child(8) {
+  transform: rotate(-40deg) scale(1, 1.4);
+  top: 70%;
+  left: 12%;
+}
+
+.moon__crater:nth-child(9) {
+  background: #e1e3e0;
+  transform: rotate(-40deg) scale(1.4, 1);
+  top: 20%;
+  left: 15%;
+}
+
+.moon__crater:nth-child(10) {
+  font-size: 0.5em;
+  top: 35%;
+  left: 70%;
+}
+
+.astronaut {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.12em;
+  z-index: 1;
+}
+
+.head {
+  z-index: 3;
+  position: relative;
+  width: 5em;
+  height: 5em;
+  background: #fff;
+  border-radius: 50%;
+  border: 0.2em solid #eee;
+}
+
+.head::before {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  width: 4.5em;
+  height: 3.5em;
+  top: 1em;
+  left: 0.25em;
+  background: linear-gradient(#555, #333);
+  border-radius: 40% 40% 50% 50%;
+}
+
+.head::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  width: 4em;
+  height: 2.5em;
+  top: 1.25em;
+  left: 0.5em;
+  border-top: 0.3em solid #ddd;
+  border-radius: 40% 40% 50% 50%;
+}
+
+.body {
+  z-index: 1;
+  position: relative;
+  width: 5em;
+  margin-top: -1em;
+  height: 6em;
+  background: #fff;
+}
+
+.arms {
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  width: 6em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arm {
+  width: 1.75em;
+  height: 3.5em;
+  background: #fff;
+  border-radius: 40%;
+  transform-origin: 50% 0.5em;
+}
+
+.arm::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  top: 2.5em;
+  width: 1.75em;
+  height: 3em;
+  border-radius: 40%;
+  background: #fff;
+  transform-origin: 50% 0.5em;
+}
+
+.arm::after {
+  transform-origin: 50% 0.5em;
+  content: '';
+  position: absolute;
+  top: 2.5em;
+  width: 1.75em;
+  height: 1em;
+  border-radius: 50% 50% 0 0;
+  background: #888;
+}
+
+.arm:nth-child(1) {
+  transform: rotate(30deg);
+}
+
+.arm:nth-child(1)::before {
+  transform: rotate(50deg);
+}
+.arm:nth-child(1)::after {
+  transform: rotate(50deg) translateY(2.2em);
+}
+.arm:nth-child(2) {
+  transform: rotate(-40deg);
+}
+.arm:nth-child(2)::before {
+  transform: rotate(-110deg);
+  height: 3.5em;
+  border-bottom: 1em solid #888;
+  animation-name: waving;
+  animation-duration: 0.6s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.arm:nth-child(2)::after {
+  display: none;
+}
+
+@keyframes waving {
+  from {
+    transform: rotate(-110deg);
+  }
+  to {
+    transform: rotate(-150deg);
+  }
+}
+
+.legs {
+  position: absolute;
+  top: 6em;
+  left: 0;
+  width: 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leg {
+  width: 2.3em;
+  height: 3em;
+  background: #fff;
+}
+
+.leg::after {
+  content: '';
+  position: absolute;
+  top: 2.5em;
+  width: 2.3em;
+  height: 1.2em;
+  background: #888;
+  border-radius: 50% 50% 0 0;
+}
+
+.flag {
+  z-index: 0;
+  top: 2.9em;
+  left: -2.9em;
+  position: absolute;
+  height: 12em;
+  width: 0.25em;
+  background: #eee;
+  transform: rotate(-10deg);
+  border-radius: 0.2em;
+}
+
+.flag::after {
+  content: '';
+  position: absolute;
+  top: 0.1em;
+  right: 0;
+  margin-right: 0.25em;
+  width: 0;
+  height: 0;
+  border-top: 1.5em solid transparent;
+  border-right: 6em solid green;
+  border-bottom: 1.5em solid transparent;
+}
