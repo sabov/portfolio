@@ -136,10 +136,14 @@ dd {
 .about__avatar {
   display: block;
   float: left;
-  width: 325px;
-  margin-right: 1.5rem; }
+  width: 315px;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid #DDD; }
 
 @media (max-width: 1024px) {
+  .about__title {
+    text-align: center; }
   .about__avatar {
     float: none;
     margin: 0 auto; } }
