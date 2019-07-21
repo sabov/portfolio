@@ -11,10 +11,8 @@
   },
   "author": "Oleksandr Sabov (alexsabov@gmail.com)",
   "license": "ISC",
-  "dependencies": {
-    "http-server": "^0.11.1"
-  },
   "devDependencies": {
+    "http-server": "^0.11.1",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1"
   }
