@@ -131,7 +131,7 @@ dd {
 .about {
   padding: 0 2rem 2rem;
   max-width: 900px;
-  margin: 0 auto; }
+  margin: 0 auto 2rem; }
 
 .about__avatar {
   display: block;
