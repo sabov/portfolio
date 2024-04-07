@@ -139,7 +139,7 @@ dd {
   width: 315px;
   margin-right: 1.5rem;
   border-radius: 50%;
-  border: 2px solid #DDD; }
+  border: 2px solid #FFF; }
 
 @media (max-width: 1024px) {
   .about__title {
