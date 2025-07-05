@@ -789,6 +789,9 @@ dd {
 .text--small {
   font-size: 0.4em; }
 
+.text button {
+  font-size: 1em; }
+
 .link {
   color: #FFF;
   white-space: nowrap; }
