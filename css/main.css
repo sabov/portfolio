@@ -176,7 +176,7 @@ dd {
 .text-right {
   text-align: right; }
 
-.spss-logo {
+.mps-logo {
   position: relative;
   text-align: left;
   width: 80px;
@@ -186,6 +186,16 @@ dd {
   font-size: 75px;
   background: #2973AF;
   color: #FFF; }
+
+.spss-logo {
+  position: relative;
+  text-align: left;
+  width: 80px;
+  height: 90px;
+  padding: 0px 20px 30px;
+  border-radius: 50%;
+  font-size: 75px;
+  color: #E50914; }
 
 .spss-logo::before {
   content: 'α';
