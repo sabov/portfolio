@@ -184,8 +184,7 @@ dd {
   padding: 0px 20px 30px;
   border-radius: 50%;
   font-size: 75px;
-  background: #2973AF;
-  color: #FFF; }
+  color: #E50914; }
 
 .spss-logo {
   position: relative;
@@ -195,7 +194,8 @@ dd {
   padding: 0px 20px 30px;
   border-radius: 50%;
   font-size: 75px;
-  color: #E50914; }
+  background: #2973AF;
+  color: #FFF; }
 
 .spss-logo::before {
   content: 'α';
