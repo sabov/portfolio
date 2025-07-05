@@ -178,36 +178,39 @@ dd {
 
 .mps-logo {
   position: relative;
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
-  font-size: 75px;
-  border: 2px solid #DDD; }
+  width: 120px;
+  height: 120px;
+  background: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; }
 
 .mps-logo__n {
-  width: 7vh;
-  height: 30vh;
+  width: 16px;
+  height: 80px;
+  margin-left: -30px;
   background-color: #b1060f;
   position: relative; }
 
 .mps-logo__n:before {
   content: "";
   position: absolute;
-  width: 7vh;
-  height: 30vh;
+  width: 16px;
+  height: 80px;
   background-color: #e50913;
   transform: skew(20deg);
-  left: 5.5vh;
+  left: 15px;
+  z-index: 1;
   box-shadow: 0 0 2.5vh -1vh black; }
 
 .mps-logo__n:after {
   content: "";
   position: absolute;
-  width: 7vh;
-  height: 30vh;
+  width: 16px;
+  height: 80px;
   background-color: #b1060f;
-  left: 11vh;
-  z-index: -1; }
+  left: 30px; }
 
 .spss-logo {
   position: relative;
