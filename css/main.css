@@ -176,6 +176,16 @@ dd {
 .text-right {
   text-align: right; }
 
+.mps-logo {
+  position: relative;
+  text-align: left;
+  width: 80px;
+  height: 90px;
+  padding: 0px 20px 30px;
+  border-radius: 50%;
+  font-size: 75px;
+  color: #E50914; }
+
 .spss-logo {
   position: relative;
   text-align: left;
