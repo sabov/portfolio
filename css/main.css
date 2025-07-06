@@ -219,6 +219,7 @@ dd {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   border: 2px solid #DDD;
   border-radius: 50%; }
 
@@ -228,7 +229,6 @@ dd {
   width: 120px;
   height: 120px;
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end; }
@@ -251,7 +251,7 @@ dd {
   position: absolute;
   top: 50px;
   left: 80px;
-  z-index: 2; }
+  z-index: 1; }
 
 .spss-logo {
   position: relative;
