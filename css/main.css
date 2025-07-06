@@ -214,23 +214,23 @@ dd {
 
 .google-logo {
   position: relative;
-  width: 116px;
-  height: 116px;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border: 2px solid #DDD;
   border-radius: 50%; }
 
 .google-logo__circle {
   background: white;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 2;
   justify-content: flex-end; }
 
 .google-logo__segments {
