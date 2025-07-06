@@ -212,6 +212,48 @@ dd {
   background-color: #b1060f;
   left: 30px; }
 
+.google-logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, white 43%, #3876f8 43%);
+  border-radius: 50%; }
+
+.google-logo__circle {
+  background: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  justify-content: flex-end; }
+
+.google-logo__segments {
+  position: absolute;
+  top: -30px;
+  left: -55px;
+  height: 0;
+  width: 0;
+  border-top: 100px solid #f3001c;
+  border-bottom: 100px solid #00c449;
+  border-right: 100px dashed rgba(0,0,0,.0);
+  border-left: 100px solid #ffc500; }
+
+.google-logo__g {
+  width: 100px;
+  height: 23px;
+  background: #3876f8;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  z-index: 2; }
+
 .spss-logo {
   position: relative;
   text-align: left;
@@ -787,7 +829,10 @@ dd {
   padding: 0.1em 0; }
 
 .text--small {
-  font-size: 0.4em; }
+  font-size: 0.3em; }
+
+.text button {
+  font-size: 1em; }
 
 .link {
   color: #FFF;
