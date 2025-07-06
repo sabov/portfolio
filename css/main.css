@@ -220,23 +220,24 @@ dd {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: linear-gradient(to bottom, white 43%, #3876f8 43%);
   border-radius: 50%; }
 
 .google-logo__circle {
   background: white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: relative;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
   justify-content: flex-end; }
 
 .google-logo__segments {
   position: absolute;
   top: -30px;
-  left: -60px;
+  left: -55px;
   height: 0;
   width: 0;
   border-top: 100px solid #f3001c;
@@ -246,12 +247,12 @@ dd {
 
 .google-logo__g {
   width: 100px;
-  height: 30px;
+  height: 23px;
   background: #3876f8;
   position: absolute;
   top: 50px;
-  left: 80px;
-  z-index: 1; }
+  left: 60px;
+  z-index: 2; }
 
 .spss-logo {
   position: relative;
