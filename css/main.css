@@ -280,106 +280,78 @@ dd {
   font-size: 30px; }
 
 .wcfmc-logo {
-  position: relative;
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  color: white;
+  display: flex;
+  width: 120px;
+  height: 120px;
   font-size: 75px;
-  border: 2px solid #DDD; }
+  background: #007AFF; }
 
-.wcfmc-logo__car {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 60px;
-  height: 20px;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
-  background: #59B14C; }
+.wcfmc-logo__x {
+  height: 53px;
+  width: 70px;
+  margin-top: 39px;
+  position: relative; }
 
-.wcfmc-logo__windshield {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-bottom: 15px solid #59B14C;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  height: 0;
-  width: 40px; }
-
-.wcfmc-logo__windshield::after {
+.wcfmc-logo__x::after {
   content: '';
   position: absolute;
-  top: 4px;
+  background: #007AFF;
+  height: 100%;
+  width: 6px;
   left: 50%;
-  transform: translateX(-50%);
-  border-bottom: 10px solid #FFF;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  height: 0;
-  width: 34px; }
+  transform: translateX(-50%); }
 
-.wcfmc-logo__headlights {
+.wcfmc-logo__x-left, .wcfmc-logo__x-right {
   position: absolute;
+  width: 16px;
+  height: 15px;
+  background: white;
   top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  height: 10px;
-  width: 10px;
-  box-shadow: 20px 0 0 #FFF, -20px 0 0 #FFF; }
+  transform: translateY(-50%); }
 
-.wcfmc-logo__wheels {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
-  height: 9px;
-  width: 10px;
-  box-shadow: 20px 0 0 #59B14C, -20px 0 0 #59B14C; }
+.wcfmc-logo__x-left {
+  right: 50%; }
 
-.openmrs-logo {
-  position: relative;
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
-  font-size: 75px;
-  border: 2px solid #DDD; }
+.wcfmc-logo__x-right {
+  left: 50%; }
 
-.openmrs-logo__cross {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden; }
-
-.openmrs-logo__cross::before {
+.wcfmc-logo__x-left::before,
+.wcfmc-logo__x-left::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 35px;
-  height: 35px;
-  box-shadow: 30px 0 0 #009384, -30px 0 0 #5B57A6, 0 30px 0 #EEA616, 0 -30px 0 #F26522; }
+  width: 17px;
+  height: 22px;
+  background: white;
+  left: -8px; }
 
-.openmrs-logo__cross::after {
+.wcfmc-logo__x-left::before {
+  transform: skew(-45deg);
+  top: 12px; }
+
+.wcfmc-logo__x-left::after {
+  transform: skew(45deg);
+  top: -19px; }
+
+.wcfmc-logo__x-right::before,
+.wcfmc-logo__x-right::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #FFF; }
+  width: 17px;
+  height: 22px;
+  background: white;
+  right: -8px; }
+
+.wcfmc-logo__x-right::before {
+  transform: skew(45deg);
+  top: 12px; }
+
+.wcfmc-logo__x-right::after {
+  transform: skew(-45deg);
+  top: -19px; }
 
 .atom-icon {
   position: relative;
