@@ -282,18 +282,18 @@ dd {
 .wcfmc-logo {
   font-family: sans-serif;
   font-weight: 800;
-  font-size: 100px;
   color: white;
   display: flex;
   width: 120px;
   height: 120px;
-  font-size: 75px;
+  font-size: 70px;
+  border-radius: 50%;
   background: #007AFF; }
 
 .wcfmc-logo__x {
-  height: 53px;
-  width: 70px;
-  margin-top: 39px;
+  height: 37px;
+  width: 48px;
+  margin-top: 11px;
   position: relative; }
 
 .wcfmc-logo__x::after {
@@ -301,14 +301,14 @@ dd {
   position: absolute;
   background: #007AFF;
   height: 100%;
-  width: 6px;
+  width: 4px;
   left: 50%;
   transform: translateX(-50%); }
 
 .wcfmc-logo__x-left, .wcfmc-logo__x-right {
   position: absolute;
-  width: 16px;
-  height: 15px;
+  width: 12px;
+  height: 13px;
   background: white;
   top: 50%;
   transform: translateY(-50%); }
@@ -323,35 +323,35 @@ dd {
 .wcfmc-logo__x-left::after {
   content: '';
   position: absolute;
-  width: 17px;
-  height: 22px;
+  width: 13px;
+  height: 14px;
   background: white;
-  left: -8px; }
+  left: -6px; }
 
 .wcfmc-logo__x-left::before {
   transform: skew(-45deg);
-  top: 12px; }
+  top: 11px; }
 
 .wcfmc-logo__x-left::after {
   transform: skew(45deg);
-  top: -19px; }
+  top: -12px; }
 
 .wcfmc-logo__x-right::before,
 .wcfmc-logo__x-right::after {
   content: '';
   position: absolute;
-  width: 17px;
-  height: 22px;
+  width: 13px;
+  height: 14px;
   background: white;
-  right: -8px; }
+  right: -6px; }
 
 .wcfmc-logo__x-right::before {
   transform: skew(45deg);
-  top: 12px; }
+  top: 11px; }
 
 .wcfmc-logo__x-right::after {
   transform: skew(-45deg);
-  top: -19px; }
+  top: -12px; }
 
 .atom-icon {
   position: relative;
